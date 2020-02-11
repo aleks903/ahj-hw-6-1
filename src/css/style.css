@@ -13,6 +13,11 @@
   width: 200px;
   padding: 10px;
   border: 1px solid;
+  margin-right: 5px;
+}
+
+.col-tasks:last-child {
+  margin-right: 0;
 }
 
 .item-task {
@@ -20,10 +25,30 @@
   width: 100%;
   padding: 5px;
   margin-bottom: 5px;
+  cursor: grabbing;
+  position: relative;
+}
+
+.item-task:hover > .del-task{
+  display: block;
 }
 
 .item-task:last-child {
   margin-bottom: 0;
+}
+
+.del-task {
+  width: 20px;
+  height: 20px;
+  top: 5px;
+  right: 5px;
+  position: absolute;
+  cursor: pointer;
+  text-align: center;
+}
+
+.item-tasks {
+  min-height: 15px;
 }
 
 .dragged {
@@ -32,13 +57,17 @@
   z-index: 999;
   pointer-events: none;
   background: #fff;
-  }
+  cursor: grabbing;
+}
 
-  .add-task, .input-task {
-    margin-top: 10px;
-    padding: 5px 0;
-  }
+.add-task, .input-task {
+  margin-top: 10px;
+  padding: 5px 0;
+}
 
+.button {
+  cursor: pointer;
+}
 .hidden {
   display: none;
 }
