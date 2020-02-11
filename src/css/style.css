@@ -1,0 +1,44 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+}
+
+#tasks {
+  display: flex;
+  width: fit-content;
+  align-items: start;
+}
+
+.col-tasks {
+  width: 200px;
+  padding: 10px;
+  border: 1px solid;
+}
+
+.item-task {
+  border: 1px solid;
+  width: 100%;
+  padding: 5px;
+  margin-bottom: 5px;
+}
+
+.item-task:last-child {
+  margin-bottom: 0;
+}
+
+.dragged {
+  border-radius: 10px;
+  position: absolute;
+  z-index: 999;
+  pointer-events: none;
+  background: #fff;
+  }
+
+  .add-task, .input-task {
+    margin-top: 10px;
+    padding: 5px 0;
+  }
+
+.hidden {
+  display: none;
+}
