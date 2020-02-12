@@ -13,7 +13,9 @@
   width: 200px;
   padding: 10px;
   border: 1px solid;
+  border-radius: 5px;
   margin-right: 5px;
+  background-color: #eaeaea;
 }
 
 .col-tasks:last-child {
@@ -22,12 +24,15 @@
 
 .item-task {
   border: 1px solid;
+  border-radius: 5px;
   width: 100%;
   padding: 5px;
   margin-bottom: 5px;
   cursor: grabbing;
   position: relative;
+  background-color: #ffffff;
 }
+
 
 .item-task:hover > .del-task{
   display: block;

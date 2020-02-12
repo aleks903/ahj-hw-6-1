@@ -1,3 +1,4 @@
+/* eslint-disable class-methods-use-this */
 export default class WorkDisplay {
   constructor() {
     this.toDoTasks = document.querySelector('#todo .item-tasks');
@@ -6,11 +7,9 @@ export default class WorkDisplay {
   }
 
   addArrTask(parentEl, arr) {
-    let htmlCode = '';
     for (let i = 0; i < arr.length; i += 1) {
-      this.addTask(parentEl, arr[i])
+      this.addTask(parentEl, arr[i]);
     }
-    return htmlCode;
   }
 
   initTasks(initData) {
@@ -22,13 +21,10 @@ export default class WorkDisplay {
   addTask(parentEl, value) {
     const itemTask = document.createElement('div');
     itemTask.className = 'item-task';
-    itemTask.innerHTML = 
-    `
+    itemTask.innerHTML = `
       ${value}
       <div class="del-task hidden">&#x2716;</div>
     `;
     parentEl.appendChild(itemTask);
-
   }
-
 }
